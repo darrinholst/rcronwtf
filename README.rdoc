@@ -6,8 +6,11 @@ cron tables and/or entries to human readable text
 == SYNOPSIS:
 
   CronWTF::Table.new(`crontab -l`).to_s
-  CronWTF::Entry.new("*/10 * * * * /usr/bin/some_command").to_s
-
+  => "Runs `some/command` at minutes :00, :10, :20, :30, :40, :50, every hour, on Wed."
+  
+  CronWTF::Entry.new("10 * * 0-2 * some/command").to_s
+  => "Runs `some/command` at minute :10, every hour, in Jan, Feb, Mar, every week day."
+  
 == INSTALL:
 
   sudo gem install rcronwtf
