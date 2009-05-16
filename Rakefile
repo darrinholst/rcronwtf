@@ -9,6 +9,7 @@ begin
     gem.email = "darrinholst@gmail.com"
     gem.homepage = "http://github.com/darrinholst/rcronwtf"
     gem.authors = ["Darrin Holst"]
+    gem.rubyforge_project = 'rcronwtf'
   end
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
