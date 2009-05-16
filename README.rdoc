@@ -1,6 +1,20 @@
 = rcronwtf
 
-Description goes here.
+* http://github.com/#{github_username}/#{project_name}
+
+== DESCRIPTION:
+
+a ruby port of http://github.com/technoweenie/cronwtf that translates
+cron tables and/or entries to human readable text
+
+== SYNOPSIS:
+
+  CronWTF::Table.new(`crontab -l`).to_s
+  CronWTF::Entry.new("*/10 * * * * /usr/bin/some_command").to_s
+
+== INSTALL:
+
+  sudo gem install rcronwtf
 
 == Copyright
 
