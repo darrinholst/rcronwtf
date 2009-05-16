@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "rcronwtf"
-    gem.summary = %Q{TODO}
+    gem.summary = %Q{translate cron entries into human readable form}
     gem.email = "darrinholst@gmail.com"
     gem.homepage = "http://github.com/darrinholst/rcronwtf"
     gem.authors = ["Darrin Holst"]
