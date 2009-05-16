@@ -41,7 +41,7 @@ class CronWTF::Entry
     @days      = parse_attribute(pieces[2], 31)
     @months    = parse_attribute(pieces[3], 12)
     @week_days = parse_attribute(pieces[4], 8)
-    @command   = pieces.slice(5, pieces.length).join(" ")
+    @command   = pieces[5..-1].join(' ')
   end
 
   def parse_attribute(value, upper_bound)
@@ -59,16 +59,8 @@ class CronWTF::Entry
     end
 
     if(value.match(/^\d+\-\d+$/))
-      matches = value.match(/^(\d+)\-(\d+)$/)
-      lower = matches[1]
-      upper = matches[2]
-      range = []
-
-      for i in (lower..upper)
-        range << i.to_i
-      end
-
-      return range
+      match = value.match(/^(\d+)\-(\d+)$/)
+      return (match[1].to_i..match[2].to_i).to_a
     end
 
     return value.split(",").map{|v| v.to_i}
