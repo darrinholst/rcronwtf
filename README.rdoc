@@ -1,7 +1,3 @@
-= rcronwtf
-
-* http://github.com/#{github_username}/#{project_name}
-
 == DESCRIPTION:
 
 a ruby port of http://github.com/technoweenie/cronwtf that translates
