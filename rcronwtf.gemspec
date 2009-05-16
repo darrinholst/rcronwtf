@@ -20,13 +20,19 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/rcronwtf.rb",
+     "lib/rcronwtf/entry.rb",
+     "lib/rcronwtf/table.rb",
+     "rcronwtf.gemspec",
+     "test/entry_test.rb",
+     "test/table_test.rb",
      "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/darrinholst/rcronwtf}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
+  s.rubyforge_project = %q{rcronwtf}
   s.rubygems_version = %q{1.3.3}
-  s.summary = %q{TODO}
+  s.summary = %q{translate cron entries into human readable form}
   s.test_files = [
     "test/entry_test.rb",
      "test/table_test.rb",
